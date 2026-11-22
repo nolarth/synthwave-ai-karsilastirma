@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151022">
+  <title>Sonsuz Sürüş · Astra ve Opus</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: system-ui, sans-serif;
+      color: #fff7fc;
+      background: #151022;
+    }
+    * { box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      min-height: 100svh;
+      margin: 0;
+      padding: 2rem 1.25rem;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(ellipse at 50% 24%, #38233f, transparent 58%);
+    }
+    main { width: min(100%, 48rem); }
+    header { text-align: center; margin-bottom: clamp(2rem, 6vw, 3.5rem); }
+    .sun {
+      display: block;
+      width: 4rem;
+      height: 4rem;
+      margin: 0 auto 1.5rem;
+      border-radius: 50%;
+      background: linear-gradient(#ffdbad, #fd79a3);
+      mask-image: linear-gradient(#000 45%, transparent 45%),
+        repeating-linear-gradient(#000 0 5px, transparent 5px 8px);
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.75rem, 8vw, 5rem);
+      line-height: 1.05;
+      font-style: italic;
+      letter-spacing: -.065em;
+    }
+    p { margin: 1rem 0 0; color: #d2c4d7; line-height: 1.6; }
+    nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+    .game {
+      --accent: #ffb4d3;
+      display: grid;
+      gap: 1.5rem;
+      padding: clamp(1.5rem, 4vw, 2.25rem);
+      color: inherit;
+      text-decoration: none;
+      border: 1px solid #57455e;
+      border-radius: 1rem;
+      background: linear-gradient(135deg, #322438, #221b2e);
+    }
+    .game:nth-child(2) { --accent: #c9bbff; }
+    .game:hover, .game:focus-visible { border-color: var(--accent); }
+    .game:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    .name { font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; letter-spacing: -.04em; }
+    .action { display: flex; gap: .65rem; align-items: center; color: var(--accent); font-weight: 600; }
+    .action::before {
+      content: "";
+      border-block: .3rem solid transparent;
+      border-left: .48rem solid currentColor;
+    }
+    @media (max-width: 32rem) {
+      nav { grid-template-columns: 1fr; }
+      .game { display: flex; justify-content: space-between; align-items: center; gap: .75rem; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <span class="sun" aria-hidden="true"></span>
+      <h1>Sonsuz sürüş</h1>
+      <p>Aynı synthwave sürüş oyununu Astra ve Opus ile dene, iki deneyimi karşılaştır.</p>
+    </header>
+    <nav aria-label="Oyun sürümleri">
+      <a class="game" href="./astra.html">
+        <span class="name">Astra</span><span class="action">Sürüşe başla</span>
+      </a>
+      <a class="game" href="./opus.html">
+        <span class="name">Opus</span><span class="action">Sürüşe başla</span>
+      </a>
+    </nav>
+  </main>
+</body>
+</html>
